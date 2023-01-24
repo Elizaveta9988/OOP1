@@ -15,7 +15,7 @@ public class Task1 {
         ArrayList<BaseHero> rogue = new ArrayList<>();
         String[] rogueNames = {" Михаил, " "Егор ", "Дмитрий," " Сережа," "Елисей"};
         for (String name: farmerNames){
-            farmer.add(new Rogue(name);
+            farmer.add (new Rogue(name);
         }
 
         for (BaseHero character: rogue){
@@ -79,3 +79,4 @@ public class Task1 {
 
     }
 }
+ 
