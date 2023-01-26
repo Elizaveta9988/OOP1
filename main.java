@@ -46,6 +46,27 @@ public class Main {
     }
 }
 
+    System.out.printf("\------------------");
+    System.out.printf("List 1");
+    System.out.printf(personList1);
+    //Sniper sniper1 = new Sniper("sniper Sergey");
+    //for (var item: personList1){
+        //item.step(personlList1);
+    //}
+    for (int i=0; i<10; i++){
+
+    }
+    System.out.printf("\------------------");
+    personList1.forEach(n-> n.step(personList1));
+    System.out.println(personList1);
+
+
+
+
+    //System.out.printf("\n------------------");
+    //System.out.printf("List 2");
+    //System.out.printf(personList2);
+
 
 
 
