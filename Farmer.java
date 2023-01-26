@@ -1,5 +1,5 @@
 public class Farmer extends BaseHero{
-    int supply;
+    protected int supply;
     public String Farmer(String name, int attack, int defence, int damage, int health, int speed, int supply) {
         super(name, attack, defence, damage, health, speed);
         this.supply = supply;
@@ -16,3 +16,4 @@ public class Farmer extends BaseHero{
 
     }
 }
+

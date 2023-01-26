@@ -8,6 +8,7 @@ public class BaseHero {
         this.defence = defence;
         this.damage = damage;
         this.health = health;
+        this.health = maxHealth - new Random().nextInt(maxHealth);
         this.speed = speed;
     }
 
@@ -15,4 +16,12 @@ public class BaseHero {
     public String toString() {
         return ("Name: " + name + ", Attack:" + attack + ", Defence:" + defence + ", Damage:" + damage + ", Health:" + health + ", Speed: " + speed);
 
-
+        @Override
+        public String getInfo(){
+            return  role + " " + String.ValueOf(maxHealth) + " " + String.valueOf(health);
+    
+            @Override
+            public void step(ArrayList<BaseHero> heroesList) {
+    
+            }
+    }
