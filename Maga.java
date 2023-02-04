@@ -1,8 +1,11 @@
 import java.util.ArrayList;
 
-public class Mage  extends BaseHero{
+public class Maga  extends BaseHero{
     int mana;
-    public Mage(String name, int attack, int defence, int [] damage, int health, int speed, int mana ) {
+    public Mage(ArrayList<BaseHero> gang, int x, int y){
+        
+    }
+    (String name, int attack, int defence, int [] damage, int health, int speed, int mana ,  int x, int y) {
         super(name, attack, defence, damage, health, speed);
         this.mana = mana;
 

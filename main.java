@@ -1,7 +1,7 @@
 public class main {
     
 }
-public class Main {
+public class main {
     public static void main(String[] args){
         ArrayList<BaseHero> heroesOne = new ArrayList<>();
         ArrayList<BaseHero> heroesTwo = new ArrayList<>();
@@ -67,7 +67,48 @@ public class Main {
     //System.out.printf("List 2");
     //System.out.printf(personList2);
 
+public static final int GANG_SIZE = 5;
+public static ArrayList<BaseHero> whiteSide;
+public static ArrayList<BaseHero> darkSide;
+public static void main(String[] args){
+    int();
 
+    Scanner scanner = new Scanner(System.in);
+    while(true){
+        ConsoleSide.forEach(n-> n.step(darkSide));
+        whiteSide.forEach(n-> n.step(darkSide));
+        darkSide.forEach(n->n.step(whiteSide));
+        scanner.nextLine();
+    }
+}
+
+private static void init(){
+    whileSide = new ArrayList<>();
+    darkSide = new ArrayList<>();
+
+    int x =1;
+    int y =1;
+    for(int i =0; i<GANG_SIZE; i++){
+        switch( new Random().nextInt( bound:4)){
+            case 0:whileSide.aad(new Farmer(whileSide, x, y++));break;
+            case 1:whileSide.aad(new Rogue(whileSide, x, y++));break;
+            case 2:whileSide.aad(new Sniper(whileSide, x, y++));break;
+            default:whileSide.aad(new Monk(whileSide, x, y++));break;
+
+        }
+    }
+
+    x = GANG_SIZE;
+    y =1;
+    for (int i = 0; i<GANG_SIZE; i++){
+        switch(new Random().nextInt(bound:4)){
+            case 0: darkSide.add(new Farmer(darkSide, x, y++));break;
+            case 1:darkSide.add(new Spearman(darkSide,x, y++));break;
+            case 2:darkSide.add(new Healer(darkSide, x,y++));break;
+            default: darkSide.add(new Crossbownman(darkSide, x,y++));break;
+        }
+    }
+}
 
 
 

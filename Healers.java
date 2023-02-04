@@ -6,8 +6,9 @@ public class Healers<heroesList> extends  BaseHero{
 
     int mana;
 
-    public Healers( String name , String role , int attack, int defence, int [] damage , int health, int speed, int mana){
-        super(name, role, attack,defence, damage,health,speed);
+    public Healers(ArrayList<BaseHero> gang, int x, int y)
+    ( String name , String role , int attack, int defence, int [] damage , int health, int speed, int mana , int x, int y){
+        super(name, role, attack,defence, damage,health,speed , x,y);
         this.mana =mana;
     }
 }    
@@ -31,7 +32,10 @@ public class Healers<heroesList> extends  BaseHero{
                   max = temp;
                   maxi = i;
               }
-
+ 
+              if (0 < max && max < 100){
+                healing(teamList.get(maxi));
+              }
         }
         Double max = Collections.max(reduceHealth);
         System.out.printf(max,);
@@ -46,5 +50,16 @@ public class Healers<heroesList> extends  BaseHero{
     public String toString() {return super.toString()+ ", Mana:" ;}
 
     }
+if( teamList.get(index).hp == naxHp || teamList.get(index).hp<= 0){
+    return;{
 
+    }else if (teamList.get(index). hp - damage[0] > maxHp){
+        teamList.get(index).hp = naxHp;
+        System.out.println("Player" + this.name + " (" + this.getClass().getSimpleName() + ")" + "healed \uD83D\uDC9A" + teamList.get(index));
+
+    }else{
+        teamList.get(index).hp -= damage[0];
+        System.out.println("Player" + this.name + "(" + this.getClass().getSimpleName()+ ")" "healed \uD83D\uDC9A"+ teamList.get(index)); 
+    }
+}
 

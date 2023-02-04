@@ -1,6 +1,9 @@
 public class Rogue  extends  BaseHero{
-    public Rogue(String name, int attack, int defence, int [] damage, int health, int speed) {
-        super(name, attack, defence, damage, health, speed);
+    public Rogue(ArrayList<BaseHero> gang, int x, int y){
+
+    }
+    (String name, int attack, int defence, int [] damage, int health, int speed int x, int y) {
+        super(name, attack, defence, damage, health, speed ,x y);
     }
 }
 

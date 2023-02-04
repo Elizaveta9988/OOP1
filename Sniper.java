@@ -3,8 +3,11 @@ import java.util.ArrayList;
 public class Sniper extends BaseHero{
      private int shoots ;
 
-    public String Sniper(String name, int attack, int defence, int [] damage, int health, int speed, int shoots) {
-        super(name, attack, defence, damage, health, speed);
+    public String (ArrayList<BaseHero> gang, int x, int y){
+
+    }
+    Sniper(String name, int attack, int defence, int [] damage, int health, int speed, int shoots , x , y ) {
+        super(name, attack, defence, damage, health, speed x, y);
         this.shoots =shoots;
 
 
