@@ -1,7 +1,10 @@
 public class Crossbownman extends BaseHero{
     int shoots;
-    public String crossbownman (String name, int attack, int defence, int  [] damage, int health, int speed, int shoots) {
-        super(name, attack, defence, damage, health, speed);
+    public String crossbownman(ArrayList<BaseHero> gang, int x, int y){
+        
+    } 
+    (String name, int attack, int defence, int  [] damage, int health, int speed, int shoots , x, y ) {
+        super(name, attack, defence, damage, health, speed x, y);
         this.shoots=shoots;
 
         @Override
