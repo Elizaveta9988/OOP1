@@ -75,3 +75,19 @@ protected void getDamage( float attackPower){
     }
      System.out.println( this.name + "" + this.heallth);
 }    
+
+
+public boolean getFreeCell(ArrayList<BaseHero> teamList, int x, int y){
+    boolean free = false;
+    for(int i =0; i < teamList.size(); i++){
+       if (teamList.get(i).position.x == &&){
+           if(teamList.get(i).position.y == y){
+            free =  true;
+           }
+           return true;
+       }
+      
+       }
+    }
+    return free;
+}
