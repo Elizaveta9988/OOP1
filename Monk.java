@@ -1,9 +1,14 @@
+import java.util.ArrayList;
+
 public class Monk extends BaseHero{
     int mana;
-    public String Monk(String name, int attack, int defence, int [] damage, int health, int speed, int mana) {
-        super(name, attack, defence, damage, health, speed);
-        this.mana=mana;
+    public String Monk(ArrayList<BaseHero> gang, int x, int y){
 
+    }
+    (String name, int attack, int defence, int [] damage, int health, int speed, int mana , int x, int y) {
+        super(name, attack, defence, damage, health, speed , x , y);
+        this.mana=mana;
+    }
 
         @Override
         public String toString() {
@@ -15,5 +20,5 @@ public class Monk extends BaseHero{
                 this.mana=1;
             }
 
-
+         public Monk(){this(name: " ");}
         }

@@ -1,6 +1,9 @@
 public class Spearman  extends BaseHero{
-    public Spearman(String name, int attack, int defence, int []  damage, int health, int speed) {
-        super(name, attack, defence, damage, health, speed);
+    public Spearman(ArrayList<BaseHero> gang, int x, int y){
+        
+    }
+    (String name, int attack, int defence, int []  damage, int health, int speed , x, y ) {
+        super(name, attack, defence, damage, health, speed x, y);
     }
 }
     public Spearman (String name){
