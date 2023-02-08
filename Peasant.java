@@ -14,3 +14,8 @@ public class Peasant extends BaseHero {
 
 
 }
+
+@Override
+public void step(){
+    if (health ==0) return;
+}

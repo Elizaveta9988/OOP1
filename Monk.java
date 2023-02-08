@@ -20,5 +20,5 @@ public class Monk extends BaseHero{
                 this.mana=1;
             }
 
-
+         public Monk(){this(name: " ");}
         }

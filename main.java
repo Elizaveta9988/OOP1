@@ -110,5 +110,37 @@ private static void init(){
     }
 }
 
+public static List<Team> getTeams(){
+    List<Team> team = new ArrayList<>(initialCapacity:2);
 
+    Team team1 = new Team(color: "red");
+    RandomFactory RandomFactoryTeam1 = new RandomFactory(new HeroFactory[]){
+        new PeasantFactory(),
+        new RoqueFactory(),
+        new SniperFactory(),
+        new WizardFactory(),
+    }};
+    while (team1.getSize() <team1.getCapacity()){
+        team1.add(RandomFactoryTeam1.create());
+    }
+    teams.add(team2);
+
+    return teams;
+}
+
+HeroTeam.Init();
+Scanner = scanner = new Scanner(System.in);
+
+while(true){
+    ConsoleView.view();
+    System.out.println("Press ENTER");
+    scanner.nextLine();
+    gameStep();
+    if(HeroTeam.deadTeam(HeroTeam.monkTeam) || HeroTeam.deadTeam(HeroTeam.wizardTeam))
+    {
+        ConsoleView.view();
+        System.out.println("End");
+        break;
+    }
+}
 

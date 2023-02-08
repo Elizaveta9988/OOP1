@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class BaseHero {
     String name;
     Integer attack, defence, damage, health, speed;
@@ -11,6 +13,9 @@ public class BaseHero {
         this.health = maxHealth;
         this.maxHealth = health;
         this.speed = speed;
+
+        Random random = new Random();
+        rnd = random.nextInt(origin:0, bound:10);
     }
 
     @Override
@@ -52,6 +57,12 @@ public class BaseHero {
 
     protected Vector2 position; 
 
+    private int rnd;
+
+    private boolean pass;
+
+    
+
 
 }
 
@@ -90,4 +101,26 @@ public boolean getFreeCell(ArrayList<BaseHero> teamList, int x, int y){
        }
     }
     return free;
+}
+
+@Override
+public String getInfo(){
+    return String.format("%-8s", "💚"  + (int) this.health + "/" + maxHealth) +
+    String.format("%-5s", "⚔" + attack) +
+    String.format("%-7s", "🤛" + (damage[0] == damage[1]? damage[0]: damage[0] + "-" + damage[1])) +
+    String.format("%-6s", "🛡️" + defence) +
+    String.format("%-5s", "🏃" + speed);
+
+}
+
+public int hashCode(){
+    int result = getName().hashCode();
+    result =31 * result + getTeam().hashCode();
+    result = 31 * result + getClassName().hashCode();
+    return result;
+}
+
+public void setRnd(int rnd){
+    Random random = new Random();
+    this.random.nextInt(origin:0, bound:10);
 }

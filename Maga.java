@@ -1,4 +1,7 @@
 import java.util.ArrayList;
+import java.util.Random;
+
+import org.w3c.dom.html.HTMLTableRowElement;
 
 public class Maga  extends BaseHero{
     int mana;
@@ -33,3 +36,65 @@ public void step(ArrayList<BaseHero> list){
     }
 }
 
+@Override
+public void step(){
+    setRnd();
+    if (isPass()){
+        setPass(false);
+        return;
+    }
+    if(health == 0) return;
+    
+    for ( Hero deadHero: team){
+        if(deadHero.getHealth() ==0){
+            RandomFactory RandomFactoryTeam1 = new RandomFactory(new HeroFactory[]){
+                new PeasantFactory();
+                new RoqueFactory();
+                new SniperFactory();
+                new WizardFactory();
+            }};
+            RandomFactory RandomFactoryTeam2 = new RandomFactory(new HeroFactory[]){
+                new CrossbowmanFactory(),
+                new MonkFactory(),
+                new PeasantFactory(),
+                new SpearmanFacrory(),
+            }};
+            
+            Cell teamCell = deadHero.getCell();
+            Team teamTeam = deadHero.getTeam();
+            int index = teamTeam.getHeroes().index0f(deadHero);
+
+            System.out.println(this.getClassName() + " " + this.getName()+
+                   "resurrects" + deadHero.getName());
+
+            deadHero = team.getColor().equals("red") ? RandomFactoryTeam1.create():RandomFactoryTeam2.creat();
+            deadHero = team.getColor().equals("red") ? RandomFactoryTeam1.create() :  RandomFactoryTeam2.create();
+            teamCell.setHero(deadHero);
+            deadHero.setTeam(tempTeam);
+          
+            teamTeam.getHeroes().set(index, deadHero);
+            setPass(true);
+
+            System.out.println(deadHero.getClassName() + " " + deadHero.getName()+
+                   "now alive" );
+            return;
+
+        }
+    }
+
+    Hero lowestHealthHero = null;
+    float lowestHealthPoints =1000;
+    for (Hero hero : team){
+        if(hero getHealth() > 0 && hero.getHealth() <hero.getMaxHealth() && hero.getHealth() < lowestHealthHero){
+            lowestHealthPoints = hero.getHealth();
+            lowestHealthHero = hero;
+        }
+    }
+
+    if (lowestHealthHero != null){
+        lowestHealthHero.takeDamage(this.getDamage()[0]);
+        System.out.println(this.getClassName() + "💚" + -this.getDamage()[0]);
+    }else{
+        System.out.println(ClassName + " " + name + " wanted to heal teammates, but their HP are full");
+    }
+}
